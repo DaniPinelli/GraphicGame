@@ -20,16 +20,29 @@ const questionnaire = [{
     }
 ];
 
+let rightAnswer;
+
 const printQuestion = (i) => {
     const question = questionnaire[i];
     let answers = question.answers;
 
 
-    const answersArray = answers.map(currentA => `<p><button>Answer</button> <span>${currentA} </span></p>`);
+    const answersArray = answers.map(currentA => `<p><button onClick="evaluator('${currentA}', this)"> * </button> <span>${currentA} </span></p>`);
 
-    let htmlQuestion = `<p>${question.question}</p> <div>${answersArray}</div>  `;
+    const htmlAnswers = answersArray.join(' ');
+
+    let htmlQuestion = `<p>${question.question}</p> <div>${htmlAnswers}</div>`;
 
     document.querySelector('.questions').innerHTML = htmlQuestion;
+}
+
+const evaluator = (answer, obj) => {
+    const parentP = obj.parentNode;
+    if (answer === rightAnswer) {
+        parentP.classList.add('right');
+    } else {
+        parentP.classList.add('wrong');
+    }
 }
 
 printQuestion(1);
