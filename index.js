@@ -22,9 +22,14 @@ const questionnaire = [{
 
 const printQuestion = (i) => {
     const question = questionnaire[i];
-    let htmlQuestion = `<p>${question.question}</p>`;
+    let answers = question.answers;
+
+
+    const answersArray = answers.map(currentA => `<p><button>Answer</button> <span>${currentA} </span></p>`);
+
+    let htmlQuestion = `<p>${question.question}</p> <div>${answersArray}</div>  `;
 
     document.querySelector('.questions').innerHTML = htmlQuestion;
 }
 
-printQuestion(2);
+printQuestion(1);
