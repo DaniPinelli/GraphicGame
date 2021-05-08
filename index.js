@@ -1,3 +1,6 @@
+//////////////////// Q & A list ////////////////////
+
+
 const questionnaire = [{
         "question": "What is the largest ocean in the world?",
         "answers": ["Atlantic ocean", "Pacific ocean", "Indian ocean"]
@@ -20,14 +23,17 @@ const questionnaire = [{
     }
 ];
 
-let rightAnswer;
+//////////////////// Printing on screen ////////////////////
+
+
 
 const printQuestion = (i) => {
     const question = questionnaire[i];
     let answers = question.answers;
+    let rightAnswer = answers[0];
 
 
-    const answersArray = answers.map(currentA => `<p><button onClick="evaluator('${currentA}', this)"> * </button> <span>${currentA} </span></p>`);
+    const answersArray = answers.map(currentA => `<p><button onClick="evaluator('${currentA}', this)"> * </button> <span>${currentA}</span></p>`);
 
     const htmlAnswers = answersArray.join(' ');
 
@@ -38,7 +44,8 @@ const printQuestion = (i) => {
 
 const evaluator = (answer, obj) => {
     const parentP = obj.parentNode;
-    if (answer === rightAnswer) {
+
+    if (answer == rightAnswer) {
         parentP.classList.add('right');
     } else {
         parentP.classList.add('wrong');
