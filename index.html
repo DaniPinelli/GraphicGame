@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <div .class="container">
+    <div class="container">
         <div class="one">
-            <h1>Welcome to 5 Question's Game Graphic Edition!</h1>
+            <h1>Welcome to 5 Question's Graphic Edition!</h1>
             <h2>Hello Albert Einstein!</h2>
             <p><strong>Ready?</strong> </p>
         </div>
@@ -22,22 +22,27 @@
         <div class="wrongMessage">
             <h3>Wrong Answer!</h3>
         </div>
-        <div class="questions">
 
-
-
+        <div class="over">
+            <p>GAME OVER</p>
         </div>
-        <div><button class="next" onClick="printQuestion(currentQindex)">Next Question</button></div>
+
+        <div class="questions">
+        </div>
+
+        <div class="nextBtn">
+            <button class="next" onClick="printQuestion(currentQindex)">Next Question</button>
+        </div>
 
 
 
 
         <div class="score">
-            <p>SCORE</p>
+            <p>YOUR SCORE</p>
             <p><span class="points"></span></p>
         </div>
 
-        <footer>
+        <footer class="foot">
             <p>By Daniel Pinelli</p>
         </footer>
     </div>

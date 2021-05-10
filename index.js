@@ -18,8 +18,8 @@ const questionnaire = [{
         "answers": ["1945", "1947", "1943"]
     },
     {
-        "question": "What year only had 355 days?",
-        "answers": ["1582", "1615", "1823"]
+        "question": "Whats the name of Inspector Gadgets nieces dog?",
+        "answers": ["Brain", "Pluto", "Lassie"]
     }
 ];
 
@@ -53,8 +53,10 @@ const printQuestion = (i) => {
     if (finishCount == 5) {
 
         document.querySelector('.next').style.display = 'none';
-
+        setTimeout("document.querySelector('.over').style.display = 'block'", 4000);
     }
+
+
 }
 
 const evaluator = (answer, obj) => {
@@ -63,7 +65,7 @@ const evaluator = (answer, obj) => {
 
     const parentP = obj.parentNode;
 
-    if (answer == "Pacific Ocean" || answer == "Deadpool" || answer == "The Angels Jump" || answer == "1945" || answer == "1582") {
+    if (answer == "Pacific Ocean" || answer == "Deadpool" || answer == "The Angels Jump" || answer == "1945" || answer == "Brain") {
         parentP.classList.add('right');
         pointsCounter = pointsCounter + 100;
         document.querySelector('.points').innerHTML = pointsCounter;
@@ -78,4 +80,4 @@ const evaluator = (answer, obj) => {
 }
 
 
-setTimeout('printQuestion(currentQindex)', 3000);
+setTimeout('printQuestion(currentQindex)', 2000);

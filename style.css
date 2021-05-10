@@ -1,28 +1,81 @@
 body {
-    background: rgb(6, 6, 77);
-    color: rgb(37, 126, 161);
+    margin-top: 0;
+    margin-left: 0;
+    color: white;
+}
+
+.container {
+    background-image: url('bg.png');
+}
+
+.one {
+    padding-top: 10px;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.questions {
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.nextBtn {
+    margin: 0 auto;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+}
+
+.points {
+    font-size: 40px;
 }
 
 .right {
     background: green;
     color: antiquewhite;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .wrong {
     background: red;
     color: white;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .congrats {
     display: none;
-    color: blueviolet;
-    font-size: 30px;
+    color: rgb(39, 224, 79);
+    font-size: 25px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .wrongMessage {
     display: none;
-    color: blueviolet;
-    font-size: 30px;
+    color: rgb(194, 130, 12);
+    font-size: 20px;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .btn {
@@ -34,9 +87,28 @@ body {
 }
 
 .score {
-    float: center;
+    color: blue;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
 }
 
 button {
-    background: rgb(182, 216, 228);
+    background: rgb(110, 183, 209);
+}
+
+.over {
+    font-size: 40px;
+    color: black;
+    display: none;
+    width: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.foot {
+    color: blue;
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
 }
