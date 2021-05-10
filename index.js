@@ -37,7 +37,8 @@ const printQuestion = (i) => {
 
 
     const answersArray = answers.map(currentA => `<p class="answer"><button onClick="evaluator('${currentA}', this)"> Click </button> <span>${currentA}</span></p>`);
-
+    const hideCongrats = document.querySelector('.congrats').style.display = 'none';
+    const hideWrong = document.querySelector('.wrongMessage').style.display = 'none';
     const htmlAnswers = answersArray.join(' ');
 
     let htmlQuestion = `<p>${question.question}</p> <div>${htmlAnswers}</div>`;
@@ -54,9 +55,10 @@ const evaluator = (answer, obj) => {
         parentP.classList.add('right');
         pointsCounter = pointsCounter + 100;
         document.querySelector('.points').innerHTML = pointsCounter;
-        document.getElementById('congrats').innerHTML = "Congratulations!";
+        document.querySelector('.congrats').style.display = 'block';
     } else {
         parentP.classList.add('wrong');
+        document.querySelector('.wrongMessage').style.display = 'block';
     }
 }
 
