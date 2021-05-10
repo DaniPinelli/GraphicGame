@@ -30,24 +30,42 @@ let currentQindex = 0;
 let pointsCounter = 0;
 document.querySelector('.points').innerHTML = pointsCounter;
 
+let finishCount = 0;
+
 const printQuestion = (i) => {
     currentQindex++;
+    finishCount++;
     const question = questionnaire[i];
     let answers = question.answers;
 
-
-    const answersArray = answers.map(currentA => `<p class="answer"><button onClick="evaluator('${currentA}', this)"> Click </button> <span>${currentA}</span></p>`);
     const hideCongrats = document.querySelector('.congrats').style.display = 'none';
     const hideWrong = document.querySelector('.wrongMessage').style.display = 'none';
+
+    const answersArray = answers.map(currentA => `<p class="answer"><button class="btn" onClick="evaluator('${currentA}', this)"> Click </button> <span>${currentA}</span></p>`);
+
     const htmlAnswers = answersArray.join(' ');
 
     let htmlQuestion = `<p>${question.question}</p> <div>${htmlAnswers}</div>`;
 
     document.querySelector('.questions').innerHTML = htmlQuestion;
+
+
+    console.log(finishCount);
+
+
+    if (finishCount == 5) {
+
+        document.querySelector('.next').style.display = 'none';
+
+    }
 }
+
+
+
 
 const evaluator = (answer, obj) => {
     document.querySelectorAll('.answer').forEach(answer => answer.classList.remove('right', 'wrong'));
+    document.querySelectorAll('.btn').forEach(answer => answer.classList.add('hide'));
 
     const parentP = obj.parentNode;
 
@@ -56,10 +74,14 @@ const evaluator = (answer, obj) => {
         pointsCounter = pointsCounter + 100;
         document.querySelector('.points').innerHTML = pointsCounter;
         document.querySelector('.congrats').style.display = 'block';
+
+
     } else {
         parentP.classList.add('wrong');
         document.querySelector('.wrongMessage').style.display = 'block';
+
     }
 }
 
-setTimeout('printQuestion(currentQindex)', 4000);
+
+setTimeout('printQuestion(currentQindex)', 3000);

@@ -19,3 +19,11 @@ body {
 .wrongMessage {
     display: none;
 }
+
+.btn {
+    display: inline;
+}
+
+.hide {
+    display: none;
+}
