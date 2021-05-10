@@ -50,18 +50,12 @@ const printQuestion = (i) => {
     document.querySelector('.questions').innerHTML = htmlQuestion;
 
 
-    console.log(finishCount);
-
-
     if (finishCount == 5) {
 
         document.querySelector('.next').style.display = 'none';
 
     }
 }
-
-
-
 
 const evaluator = (answer, obj) => {
     document.querySelectorAll('.answer').forEach(answer => answer.classList.remove('right', 'wrong'));

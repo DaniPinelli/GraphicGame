@@ -1,4 +1,5 @@
 body {
+    background: rgb(6, 6, 77);
     color: rgb(37, 126, 161);
 }
 
@@ -14,10 +15,14 @@ body {
 
 .congrats {
     display: none;
+    color: blueviolet;
+    font-size: 30px;
 }
 
 .wrongMessage {
     display: none;
+    color: blueviolet;
+    font-size: 30px;
 }
 
 .btn {
@@ -26,4 +31,12 @@ body {
 
 .hide {
     display: none;
+}
+
+.score {
+    float: center;
+}
+
+button {
+    background: rgb(182, 216, 228);
 }
