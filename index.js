@@ -41,11 +41,11 @@ const printQuestion = (i) => {
     const hideCongrats = document.querySelector('.congrats').style.display = 'none';
     const hideWrong = document.querySelector('.wrongMessage').style.display = 'none';
 
-    const answersArray = answers.map(currentA => `<p class="answer"><button class="btn" onClick="evaluator('${currentA}', this)"> Click </button> <span>${currentA}</span></p>`);
+    const answersArray = answers.map(currentA => `<p class="answer"><button class="btn" onClick="evaluator('${currentA}', this)">${currentA}</button></p>`);
 
     const htmlAnswers = answersArray.join(' ');
 
-    let htmlQuestion = `<p>${question.question}</p> <div>${htmlAnswers}</div>`;
+    let htmlQuestion = `<p class="questionP" >${question.question}</p> <div>${htmlAnswers}</div>`;
 
     document.querySelector('.questions').innerHTML = htmlQuestion;
 

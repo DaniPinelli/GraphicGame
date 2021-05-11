@@ -1,24 +1,38 @@
 body {
     margin-top: 0;
     margin-left: 0;
-    color: white;
+    font-family: roboto;
 }
 
 .container {
-    background-image: url('bg.png');
+    background: #f5f5f5
 }
 
 .one {
+    font-size: 15px;
     padding-top: 10px;
     width: auto;
     margin: 0 auto;
     text-align: center;
+    background: #303f9f;
+    color: #ffffff
 }
 
 .questions {
+    background: #bdbdbd;
     width: auto;
     margin: 0 auto;
     text-align: center;
+    margin-top: 0px;
+    width: 300px;
+    padding-top: 5px;
+    border-radius: 5px;
+    height: 290px;
+}
+
+.questionP {
+    font-size: 30px;
+    margin-top: 0px;
 }
 
 .nextBtn {
@@ -80,6 +94,8 @@ h3 {
 
 .btn {
     display: inline;
+    border-radius: 3px;
+    font-size: 20px;
 }
 
 .hide {
@@ -94,7 +110,8 @@ h3 {
 }
 
 button {
-    background: rgb(110, 183, 209);
+    background: #7953d2;
+    color: #ffffff;
 }
 
 .over {
