@@ -49,19 +49,18 @@ const printQuestion = (i) => {
 
     document.querySelector('.questions').innerHTML = htmlQuestion;
 
-
     if (finishCount == 5) {
-
         document.querySelector('.next').style.display = 'none';
+        setTimeout("document.querySelector('.congrats').style.display = 'none'", 4000);
+        setTimeout("document.querySelector('.wrongMessage').style.display = 'none'", 4000);
         setTimeout("document.querySelector('.over').style.display = 'block'", 4000);
     }
-
-
 }
 
 const evaluator = (answer, obj) => {
     document.querySelectorAll('.answer').forEach(answer => answer.classList.remove('right', 'wrong'));
     document.querySelectorAll('.btn').forEach(answer => answer.classList.add('hide'));
+    document.querySelectorAll('.questionP').forEach(answer => answer.classList.add('hide'));
 
     const parentP = obj.parentNode;
 
@@ -78,6 +77,5 @@ const evaluator = (answer, obj) => {
 
     }
 }
-
 
 printQuestion(currentQindex);
