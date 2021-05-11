@@ -25,14 +25,16 @@ body {
     text-align: center;
     margin-top: 0px;
     width: 300px;
-    padding-top: 5px;
+    padding-top: 20px;
     border-radius: 5px;
-    height: 290px;
+    height: 320px;
 }
 
 .questionP {
     font-size: 30px;
+    font-weight: 990;
     margin-top: 0px;
+    color: #303f9f;
 }
 
 .nextBtn {
@@ -96,6 +98,7 @@ h3 {
     display: inline;
     border-radius: 3px;
     font-size: 20px;
+    padding: 7px 10px 7px 10px;
 }
 
 .hide {
@@ -128,4 +131,12 @@ button {
     width: 600px;
     margin: 0 auto;
     text-align: center;
+}
+
+.next {
+    margin-top: 40px;
+    background-color: orange;
+    border-radius: 3px;
+    font-size: 20px;
+    padding: 7px 10px 7px 10px;
 }

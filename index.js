@@ -80,4 +80,4 @@ const evaluator = (answer, obj) => {
 }
 
 
-setTimeout('printQuestion(currentQindex)', 2000);
+printQuestion(currentQindex);
